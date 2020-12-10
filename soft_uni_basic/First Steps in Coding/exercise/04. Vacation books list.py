@@ -1,0 +1,5 @@
+book_page = int(input())
+page_per_hour = int(input())
+number_of_days = int(input())
+page_per_hours_to_finish_the_book = (book_page / page_per_hour / number_of_days)
+print(page_per_hours_to_finish_the_book)
