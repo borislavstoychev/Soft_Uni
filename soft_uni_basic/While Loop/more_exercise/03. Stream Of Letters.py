@@ -25,7 +25,7 @@ while True:
     elif letter_input == 'o' and not secret_letter2:
         secret_letter2 = True
         continue
-    elif letter_input == 'n' and not secret_letter3:
+    elif letter_input == 'index' and not secret_letter3:
         secret_letter3 = True
         continue
 
