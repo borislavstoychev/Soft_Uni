@@ -1,0 +1,1 @@
+print(*[f"{key} -> {len(key)}"for key in input().split(", ")], sep=", ")

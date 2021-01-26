@@ -1,8 +1,5 @@
 def is_valid(matrix, pot_row, pot_col):
-    if 0 <= pot_row < len(matrix) and 0 <= pot_col < len(matrix):
-        return True
-    else:
-        return False
+    return 0 <= pot_row < len(matrix) and 0 <= pot_col < len(matrix)
 
 
 def get_kills(matrix, row, col):
@@ -19,9 +16,7 @@ def get_kills(matrix, row, col):
     return kills
 
 
-matrix = [list(input()) for _ in range(int(input()))]
-remove_count = 0
-while True:
+def position_and_max_kills(matrix):
     max_kills = 0
     killer_position = []
     for row_index in range(len(matrix)):
@@ -31,8 +26,15 @@ while True:
                 if kills > max_kills:
                     max_kills = kills
                     killer_position = [row_index, col_index]
-    if killer_position:
-        matrix[killer_position[0]][killer_position[1]] = "0"
+    return max_kills, killer_position
+
+
+matrix = [list(input()) for _ in range(int(input()))]
+remove_count = 0
+while True:
+    killings, position = position_and_max_kills(matrix)
+    if position:
+        matrix[position[0]][position[1]] = "0"
         remove_count += 1
     else:
         break
