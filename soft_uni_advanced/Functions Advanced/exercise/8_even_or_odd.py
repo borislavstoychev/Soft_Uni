@@ -1,11 +1,11 @@
 def even_odd(*args, command=""):
     command = args[-1]
-    args = args[:-1]
+    nums = args[:-1]
     result = []
     if command == "odd":
-        result = [int(n) for n in args if not int(n) % 2 == 0]
+        result = [n for n in nums if not n % 2 == 0]
     elif command == "even":
-        result = [int(n) for n in args if int(n) % 2 == 0]
+        result = [n for n in nums if n % 2 == 0]
     return result
 
 

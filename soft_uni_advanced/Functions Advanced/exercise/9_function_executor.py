@@ -7,7 +7,7 @@ def multiply_numbers(num1, num2):
 
 
 def func_executor(*args):
-    result = [el[0](*el[1]) for el in args]
+    result = [func_name(*data) for func_name, data in args]
     return result
 
 
