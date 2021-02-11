@@ -1,14 +1,16 @@
 import os
 
-
-def extract_fails(dir):
-    return [el for el in dir if "." in el]
+REPORT = os.path.expanduser("~") + "\OneDrive\Работен плот\output.txt"
 
 
-def report_files_extensions(files):
+def extract_fails(directory):
+    return [el for el in directory if "." in el]
+
+
+def report_files_extensions(all_files):
     report = {}
-    for file in files:
-        name, extension = file.split(".")
+    for f in all_files:
+        name, extension = f.split(".")
         if extension not in report:
             report[extension] = []
         report[extension].append(name)
@@ -23,6 +25,5 @@ for key, value in sorted(report_info.items(), key=lambda el: el[0]):
     result += f".{key}\n"
     for v in value:
         result += f"- - - {v}.{key}\n"
-with open('C:\\Users\\Kofto\\OneDrive\\Работен плот\\my_report_result.txt', "w") as file:
+with open(REPORT, "w") as file:
     file.write(result)
-

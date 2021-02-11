@@ -4,8 +4,6 @@ def is_valid(matrix, pot_row, pot_col):
 
 def get_kills(matrix, row, col):
     kills = 0
-    rows = [-2, -2, 2, 2, 1, 1, -1, -1]
-    cols = [-1, 1, -1, 1, -2, 2, -2, 2]
     for index in range(len(rows)):
         potential_row = row + rows[index]
         potential_col = col + cols[index]
@@ -31,6 +29,8 @@ def position_and_max_kills(matrix):
 
 matrix = [list(input()) for _ in range(int(input()))]
 remove_count = 0
+rows = [-2, -2, 2, 2, 1, 1, -1, -1]
+cols = [-1, 1, -1, 1, -2, 2, -2, 2]
 while True:
     killings, position = position_and_max_kills(matrix)
     if position:
