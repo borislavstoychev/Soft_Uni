@@ -13,8 +13,10 @@ class Player:
         return "Skill already added"
 
     def player_info(self):
-        data = f"Name: {self.name}\nGuild: {self.guild}\n HP: {self.hp}\n MP: {self.mp}\n"
-        skills = {f"==={key} – {value}" for key, value in self.skills.items()}
-        return data + "\n".join(skills) + "\n"
+        data = f"Name: {self.name}\nGuild: {self.guild}\nHP: {self.hp}\nMP: {self.mp}\n"
+        skills = {f"==={key} - {value}\n" for key, value in self.skills.items()}
+        if skills:
+            return data + "".join(skills)
+        return data
 
 
