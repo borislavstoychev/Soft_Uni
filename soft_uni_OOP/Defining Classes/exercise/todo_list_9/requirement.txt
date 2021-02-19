@@ -1,0 +1,62 @@
+    9. Todo List
+You are tasked to create two classes: a Task class and a Section class. The Task class should receive a name (string), and a due_date (str) upon initialization. The Task also has two attributes: comments (empty list) and completed set to False by default.
+The Task class should also have five methods:
+    • change_name(new_name: str)
+        ◦ Change the name of the task and return the new name.
+        ◦ If the new name is the same as the current name, return "Name cannot be the same."
+    • change_due_date(new_date: str)
+        ◦ Change the due date of the task and return the new date.
+        ◦ If the new date is the same as the current date, return "Date cannot be the same."
+    • add_comment(comment: str)
+        ◦ Add a comment to the task.
+    • edit_comment(comment_number: int, new_comment: str)
+        ◦ If the comment_number is in the comments, change the comment and return all of the comments, separated by comma and space (", ")
+        ◦ If the comment_number is not in the comments, return "Cannot find comment."
+    • details()
+        ◦ Return the task's details in this format:
+"Name: {task_name} - Due Date: {due_date}"
+The Section class should receive a name (string) upon initialization. The Task also has one attributes: tasks (empty list)
+The Section class should also have four methods:
+    • add_task(new_task: Task)
+        ◦ Add a new task to the collection. Return "Task {task details} is added to the section"
+        ◦ If the task is in the collection, return "Task is already in the section {section_name}"
+    • complete_task(task_name: str)
+        ◦ Change the task to completed. Return "Completed task {task_name}"
+        ◦ If the task is not found, return "Could not find task with the name {task_name}"
+    • clean_section()
+        ◦ Removes all of the completed tasks and returns "Cleared {amount of removed tasks} tasks."
+    • view_section()
+        ◦ Return information about the section and it's tasks in this format:
+            "Section {section_name}:
+             {details of the first task}
+             {details of the second task}
+             ...
+             {details of the n task}
+            "
+                                Examples:
+Test Code:
+
+            task = Task("Make bed", "27/05/2020")
+            print(task.change_name("Go to University"))
+            print(task.change_due_date("28.05.2020"))
+            task.add_comment("Don't forget laptop")
+            print(task.edit_comment(0, "Don't forget laptop and notebook"))
+            print(task.details())
+            section = Section("Daily tasks")
+            print(section.add_task(task))
+            second_task = Task("Make bed", "27/05/2020")
+            section.add_task(second_task)
+            print(section.clean_section())
+            print(section.view_section())
+Output:
+
+            Go to University
+            28.05.2020
+            Don't forget laptop and notebook
+            Name: Go to University - Due Date: 28.05.2020
+            Task Name: Go to University - Due Date: 28.05.2020 is added to the section
+            Cleared 0 tasks.
+            Section Daily tasks:
+            Name: Go to University - Due Date: 28.05.2020
+            Name: Make bed - Due Date: 27/05/2020
+
