@@ -1,0 +1,116 @@
+                                            Exercise: Classes and Instances
+Problems for exercise and homework for the Python OOP Course @SoftUni. Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/1937
+    1. Point
+Create a class called Point. Upon initialization it should receive x and y (numbers). Create 3 instance methods:
+    • set_x(new_x) - changes the x value of the point
+    • set_y(new_y) - changes the y value of the point
+    • distance(x, y) - returns the distance between the point and the provided coordinates
+                                       Examples
+Test Code:
+            p = Point(2, 4)
+            p.set_x(3)
+            p.set_y(5)
+            print(p.distance(10, 2))
+Output:
+            7.615773105863909
+    2. Circle
+Create a class called Circle. Upon initialization it should receive a radius (number). Create a class attribute called pi which should be equal to 3.14. Create 3 instance methods:
+    • set_radius(new_radius) - changes the radius
+    • get_area() - returns the area of the circle
+    • get_circumference() - returns the circumference of the circle
+The area should be rounded to the 2nd decimal.
+                                                Examples
+Test Code:
+            circle = Circle(10)
+            circle.set_radius(12)
+            print(circle.get_area())
+            print(circle.get_circumference())
+Output:
+            452.16
+            75.36
+    3. Account
+Create a class called Account. Upon initialization it should receive id (number), name (string), balance (number; optional; 0 by default). The class should also have 3 instance methods:
+    • credit(amount) - add the amount to the balance and return the new balance
+    • debit(amount) - if the amount is less than or equal to the balance, reduce the balance by the amount and return the new balance. Otherwise return "Amount exceeded balance"
+    • info() - returns "User {name} with account {id} has {balance} balance"
+                                              Examples
+Test Code:
+            account = Account(1234, "George", 1000)
+            print(account.credit(500))
+            print(account.debit(1500))
+            print(account.info())
+
+            account = Account(5411256, "Peter")
+            print(account.debit(500))
+            print(account.credit(1000))
+            print(account.debit(500))
+            print(account.info())
+Output:
+            1500
+            0
+            User George with account 1234 has 0 balance
+
+            Amount exceeded balance
+            1000
+            500
+            User Peter with account 5411256 has 500 balance
+    4. Employee
+Create class Employee. Upon initialization, it should receive id (number), first_name (string), last_name (string), salary (number). Create 3 more instance methods:
+    • get_full_name() - returns "{first_name} {last_name}"
+    • get_annual_salary() - returns the salary for 12 months
+    • raise_salary(amount) - increase the salary by the given amount and return the new salary
+                                                        Examples
+Test Code:
+            employee = Employee(744423129, "John", "Smith", 1000)
+            print(employee.get_full_name())
+            print(employee.raise_salary(500))
+            print(employee.get_annual_salary())
+Output:
+            John Smith
+            1500
+            18000
+    5. Time
+Create a class called Time. Upon initialization, it should receive hours, minutes and seconds (numbers). The class should also have class attributes max_hours equal to 23, max_minutes equal to 59 and max_seconds equal to 59. You should also create 3 instance methods:
+    • set_time(hours, minutes, seconds) - update the time with the new values
+    • get_time() - returns "{hh}:{mm}:{ss}"
+    • next_second() - update the time with one second (use the class attributes for validation) and return the new time (using the get_time() method)
+                                                        Examples
+Test Code:
+        time = Time(9, 30, 59)
+        print(time.next_second())
+        time = Time(10, 59, 59)
+        print(time.next_second())
+        time = Time(23, 59, 59)
+        print(time.next_second())
+Output:
+        09:31:00
+        11:00:00
+        00:00:00
+
+    6. Pizza Delivery
+Create a class called PizzaDelivery. Upon initialization it should receive name(string), price(float) and ingredients (dict). The class should also have an attribute ordered set to False by default. You should also create 3 instance methods:
+    • add_extra(ingredient: str, quantity: int, ingredient_price: float):
+        ◦ if we already have this ingredient in our pizza increase the ingredient quantity with the given one and update the pizza price by adding the amount for the additional ingredients
+        ◦ if we don't have this ingredient in our pizza, we should add it and update the pizza price
+
+    • remove_ingredient(ingredient: str, quantity: int, ingredient_price: float):
+        ◦ if we don't have this ingredient in our pizza, we should return the following message "Wrong ingredient selected! We do not use {ingredient} in {name}!"
+        ◦ if we have the ingredient, but we try to remove more than we have available we should return the following message "Please check again the desired quantity of {ingredient}!", otherwise remove the given quantity of the ingredient and update the pizza price
+
+    • make_order() - set the attribute ordered to True and return the following message "You've ordered pizza {name} prepared with {all ingredients and their quantities separated with coma and space} and the price will be {price}lv.". Please have in mind that once the pizza is ordered no further changes are allowed. We should return the following message if the customer tries to change it: "Pizza {name} already prepared and we can't make any changes!"
+
+Test Code:
+            margarita = PizzaDelivery('Margarita', 11, {'cheese': 2, 'tomatoes': 1})
+            margarita.add_extra('mozzarella', 1, 0.5)
+            margarita.add_extra('cheese', 1, 1)
+            margarita.remove_ingredient('cheese', 1, 1)
+            print(margarita.remove_ingredient('bacon', 1, 2.5))
+            print(margarita.remove_ingredient('tomatoes', 2, 0.5))
+            margarita.remove_ingredient('cheese', 2, 1)
+            print(margarita.make_order())
+            print(margarita.add_extra('cheese', 1, 1))
+Output:
+            Wrong ingredient selected! We do not use bacon in Margarita!
+            Please check again the desired quantity of tomatoes!
+            You've ordered pizza Margarita prepared with cheese: 0, tomatoes: 1, mozzarella: 1 and the price will be 9.5lv.
+            Pizza Margarita already prepared and we can't make any changes!
