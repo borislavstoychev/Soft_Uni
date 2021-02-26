@@ -1,0 +1,60 @@
+                                                Lab: Attributes and Methods
+Problems for in-class lab for the Python OOP Course @SoftUni.
+Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/2430
+    1. Store
+Create a class called Store. Upon initialization it should receive a name (str), type (str), capacity (int). The store should also have an attribute called items (dictionary that stores name of an item and its quantity). The class should have 4 methods:
+    • from_size (name:str, type:str, size:int) – a new instance should be created with capacity which is 50% of the size
+    • add_item(item_name:str) – adds 1 to the quantity of the given item. On success, the method should return "{item_name} added to the store". If the addition is not possible, the following message should be returned "Not enough capacity in the store"
+    • remove_item(item_name:str, amount:int) – removes the given amount from the item. On success, it should return "{count} {item_name} removed from the store". Otherwise, the method should return "Cannot remove {count} {item_name}"
+    • __repr__() - returns a string representation in the format "{store_name} of type {store_type} with capacity {store_capacity}"
+                                                            Examples
+Test Code:
+            first_store = Store("First store", "Fruit and Veg", 20)
+            second_store = Store.from_size("Second store", "Clothes", 500)
+            print(first_store)
+            print(second_store)
+            print(first_store.add_item("potato"))
+            print(second_store.add_item("jeans"))
+            print(first_store.remove_item("tomatoes", 1))
+            print(second_store.remove_item("jeans", 1))
+Output:
+            First store of type Fruit and Veg with capacity 20
+            Second store of type Clothes with capacity 250
+            potato added to the store
+            jeans added to the store
+            Cannot remove 1 tomatoes
+            1 jeans removed from the store
+    2. Integer
+Create a class called Integer. Upon initialization it should receive a single parameter value (int). It should have 4 methods:
+    • from_float(value) - creates a new instance by flooring the provided floating number. If the value is not a float return a message "value is not a float"
+    • from_roman(value) – creates a new instance by converting the roman number (as string) to an integer
+    • from_string(value) - creates a new instance by converting the string to an integer (if the value cannot be converted, return a message "wrong type")
+    • add(integer:Integer) – adds the values of the two instances and returns the result (if the integer is not an instance of Integer, return the message "number should be an Integer instance")
+                                                    Examples
+Test Code:
+            first_num = Integer(10)
+            second_num = Integer.from_roman("IV")
+            print(Integer.from_float("2.6"))
+            print(Integer.from_string(2.6))
+            print(first_num.add(second_num))
+Output:
+            value is not a float
+            wrong type
+            14
+    3. Calculator
+Create a class called Calculator that has the following static methods:
+    • add(*args) – sums all the arguments passed to the function and returns the result
+    • multiply(*args) – multiplies all the numbers and returns the result
+    • divide(*args) – divides all the numbers and returns the result
+    • subtract(*args) – subtracts all the numbers and returns the result
+                                                Examples
+Test Code:
+            print(Calculator.add(5, 10, 4))
+            print(Calculator.multiply(1, 2, 3, 5))
+            print(Calculator.divide(100, 2))
+            print(Calculator.subtract(90, 20, -50, 43, 7))
+Output:
+            19
+            30
+            50.0
+            70
