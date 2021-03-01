@@ -6,8 +6,7 @@ class Smartphone:
         self.is_on = False
 
     def power(self):
-        if not self.is_on:
-            self.is_on = True
+        self.is_on = not self.is_on
 
     def install(self, app: str, app_memory: int):
         if app_memory <= self.memory and self.is_on:
@@ -24,6 +23,8 @@ class Smartphone:
 
 smartphone = Smartphone(100)
 print(smartphone.install("Facebook", 60))
+smartphone.power()
+smartphone.power()
 smartphone.power()
 print(smartphone.install("Facebook", 60))
 print(smartphone.install("Messenger", 20))
