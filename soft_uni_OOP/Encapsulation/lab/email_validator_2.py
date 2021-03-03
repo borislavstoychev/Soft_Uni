@@ -8,7 +8,8 @@ class EmailValidator:
         self.mails = mails
         self.domains = domains
 
-    def __get_components(self, email):
+    @staticmethod
+    def __get_components(email):
         return re.split(r'[@.]', email)
 
     def __validate_name(self, name):
@@ -22,9 +23,7 @@ class EmailValidator:
 
     def validate(self, email):
         (name, mail, domain) = self.__get_components(email)
-        return self.__validate_name(name) \
-               and self.__validate_mail(mail) \
-               and self.__validate_domain(domain)
+        return self.__validate_name(name) and self.__validate_mail(mail) and self.__validate_domain(domain)
 
 
 mails = ["gmail", "softuni"]
