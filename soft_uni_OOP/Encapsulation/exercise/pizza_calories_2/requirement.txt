@@ -1,0 +1,36 @@
+    2. Pizza Calories
+Submit in judge a zip file named project, containing a separate file for each of the classes.
+
+Class Toppings
+Attributes
+Private attribute topping_type: string
+Private attribute weight: double
+
+Methods
+__init__( topping_type, weight) - set all the attributes to the given ones
+Getters and Setters to all of the private attributes
+
+Class Dough
+Attributes
+Private attribute flour_type: string
+Private attribute baking_technique: string
+Private attribute weight: double
+
+Methods
+__init__(flour_type, baking_technique, weight) - set all the attributes to the given ones
+Getters and Setters to all of the private attributes
+
+Class Pizza
+Attributes
+Private attribute name: string
+Private attribute dough: Dough
+Private attribute toppings: dictionary
+Private attribute toppings_capacity: number
+
+Methods
+__init__(name, dough, toppings_capacity) - set all the attributes to the given ones. Also, initialize an empty toppings dictionary. It will contain the topping type as a key and the topping's weight as a value.
+Getters and Setters to all of the private attributes
+add_topping(topping: Topping) - Adds a new topping to the dictionary.
+    • If there is no space left for a new topping, raise a ValueError: "Not enough space for another topping"
+    • If the topping is already in the dictionary, increase the value of its weight.
+calculate_total_weight() - returns the total weight of the pizza.
