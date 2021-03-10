@@ -3,8 +3,11 @@ from project.food import Vegetable, Fruit, Meat, Seed
 
 
 class Owl(Bird):
-    TYPE_OF_FOODS = (Meat,)
-    INCREASE_WEIGHT = 0.25
+    WEIGHT_INCREASE = 0.25
+    FOOD = (Meat, )
+
+    def __init__(self, name, weight, wing_size):
+        super().__init__(name, weight, wing_size)
 
     @staticmethod
     def make_sound():
@@ -12,9 +15,13 @@ class Owl(Bird):
 
 
 class Hen(Bird):
-    TYPE_OF_FOODS = (Vegetable, Fruit, Meat, Seed)
-    INCREASE_WEIGHT = 0.35
+    WEIGHT_INCREASE = 0.35
+    FOOD = (Vegetable, Fruit, Meat, Seed)
+
+    def __init__(self, name, weight, wing_size):
+        super().__init__(name, weight, wing_size)
 
     @staticmethod
     def make_sound():
         return "Cluck"
+

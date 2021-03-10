@@ -12,7 +12,7 @@ if __name__ == "__main__":
     veg = Vegetable(1)
     print(owl.feed(veg))
     print(owl)
-    hen = Tiger("Harry", 10, 10)
+    hen = Hen("Harry", 10, "beb")
     veg = Vegetable(3)
     fruit = Fruit(5)
     meat = Meat(1)

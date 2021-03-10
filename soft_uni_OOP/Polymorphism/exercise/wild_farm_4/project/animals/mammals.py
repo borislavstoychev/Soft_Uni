@@ -1,12 +1,13 @@
 from project.animals.animal import Mammal
-from project.food import Vegetable, Fruit, Meat, Seed
-
-
+from project.food import Fruit, Meat, Vegetable
 
 
 class Mouse(Mammal):
-    TYPE_OF_FOODS = (Vegetable, Fruit)
-    INCREASE_WEIGHT = 0.10
+    WEIGHT_INCREASE = 0.10
+    FOOD = (Vegetable, Fruit)
+
+    def __init__(self, name, weight, living_region):
+        super().__init__(name, weight, living_region)
 
     @staticmethod
     def make_sound():
@@ -14,17 +15,23 @@ class Mouse(Mammal):
 
 
 class Dog(Mammal):
-    TYPE_OF_FOODS = (Meat,)
-    INCREASE_WEIGHT = 0.40
+    WEIGHT_INCREASE = 0.40
+    FOOD = (Meat,)
+
+    def __init__(self, name, weight, living_region):
+        super().__init__(name, weight, living_region)
 
     @staticmethod
     def make_sound():
-        return "Woof"
+        return "Woof!"
 
 
 class Cat(Mammal):
-    TYPE_OF_FOODS = (Vegetable, Meat)
-    INCREASE_WEIGHT = 0.30
+    WEIGHT_INCREASE = 0.30
+    FOOD = (Vegetable, Meat)
+
+    def __init__(self, name, weight, living_region):
+        super().__init__(name, weight, living_region)
 
     @staticmethod
     def make_sound():
@@ -32,8 +39,11 @@ class Cat(Mammal):
 
 
 class Tiger(Mammal):
-    TYPE_OF_FOODS = (Meat,)
-    INCREASE_WEIGHT = 1.00
+    WEIGHT_INCREASE = 1.00
+    FOOD = (Meat,)
+
+    def __init__(self, name, weight, living_region):
+        super().__init__(name, weight, living_region)
 
     @staticmethod
     def make_sound():
