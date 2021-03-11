@@ -1,0 +1,41 @@
+    Problem 4. Need for Speed
+Create the following hierarchy with the following classes:
+
+and submit in judge a zip file, containing a separate file for each of the classes using the structure shown below:
+
+Create a base class Vehicle. It should contain the following attributes:
+    • DEFAULT_FUEL_CONSUMPTION - float (constant)
+    • fuel_consumption - float
+    • fuel - float
+    • horse_power - int
+    • A public constructor which accepts (fuel, horse_power) and set the default fuel consumption on the attribute fuel_consumption
+The class should have the following methods:
+    • drive(kilometers)
+        ◦ The drive method should have a functionality to reduce the fuel based on the travelled kilometers and fuel consumption. Keep in mind that you can drive the vehicle only if you have enough fuel to finish the driving.
+The default fuel consumption for Vehicle is 1.25. Some of the classes have different default fuel consumption:
+    • SportCar - DEFAULT_FUEL_CONSUMPTION = 10
+    • RaceMotorcycle - DEFAULT_FUEL_CONSUMPTION = 8
+    • Car - DEFAULT_FUEL_CONSUMPTION = 3
+Test Code:
+            vehicle = Vehicle(50, 150)
+            print(Vehicle.DEFAULT_FUEL_CONSUMPTION)
+            print(vehicle.fuel)
+            print(vehicle.horse_power)
+            print(vehicle.fuel_consumption)
+            vehicle.drive(100)
+            print(vehicle.fuel)
+            family_car = FamilyCar(150, 150)
+            family_car.drive(50)
+            print(family_car.fuel)
+            family_car.drive(50)
+            print(family_car.fuel)
+            print(family_car.__class__.__bases__[0].__name__)
+Output:
+            1.25
+            50
+            150
+            1.25
+            50
+            0.0
+            0.0
+            Car
