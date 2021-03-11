@@ -1,0 +1,8 @@
+    5. Animals
+Your task is to create a class hierarchy like the described below.
+The Animal class (abstract) should take, as attributes, a name, an age and a gender. It should have 2 methods: repr() and make_sound().
+The Dog class should inherit and implement the Animal class. His repr should return "This is {name}. {name} is a {age} year old {gender} {class}". The make_sound() method should return "Woof!"
+The Cat class should inherit and implement the Animal class. Her repr should return "This is {name}. {name} is a {age} year old {gender} {class}". The make_sound() method should return "Meow meow!"
+The Kitten class should inherit and implement the Cat class. The kitten should not accept "gender" as a parameter, but it should have its value set to "Female".  The make_sound() method should return "Meow".
+The Tomcat class should inherit and implement the Cat class. The tomcat should not accept "gender" as a parameter, but it should have its value set to "Male".  The make_sound() method should return "Hiss".
+Submit in judge a zip file named project, containing a separate file for each of the classes.
