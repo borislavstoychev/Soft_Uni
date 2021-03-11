@@ -1,0 +1,8 @@
+    3. Hierarchical Inheritance
+In a folder called project create three files: animal.py and dog.py and cat.py.
+In each file create its corresponding class - Animal, Dog and Cat.
+Animal with a single public method eat() that returns: "eating..."
+Dog with a single public method bark() that returns: "barking..."
+Cat with a single public method meow() that returns: "meowing..."
+Dog and Cat should inherit from Animal.
+Submit in Judge a zip file of the folder project.
