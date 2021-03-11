@@ -1,0 +1,21 @@
+    Problem 2. Zoo
+Create a zoo which contains the following classes:
+and submit in judge a zip file, containing a separate file for each of the classes using the structure shown below:
+Follow the diagram and create all of the classes. Each of them, except the Animal class, should inherit from another class. The Animal class should have private attribute name - string and getter for the name.
+Every class should have constructor, which accepts one parameter: name
+Test Code:
+            mammal = Mammal("Stella")
+            print(mammal.__class__.__bases__[0].__name__)
+            print(mammal.name)
+            print(mammal._Animal__name)
+            lizard = Lizard("John")
+            print(lizard.__class__.__bases__[0].__name__)
+            print(lizard.name)
+            print(lizard._Animal__name)
+Output:
+            Animal
+            Stella
+            Stella
+            Reptile
+            John
+            John
