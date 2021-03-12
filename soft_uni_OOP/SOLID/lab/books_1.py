@@ -18,11 +18,11 @@ class Library:
         searching_book = [book for book in self.books if book.title == title]
         if searching_book:
             return searching_book[0]
-        return
+        return "Not available"
 
     def add_book(self, book: Book):
-        if book not in self.books:
-            self.books.append(book)
+        self.books.append(book)
+
 
 
 b = Book("criminal", "Bobby", 999)
