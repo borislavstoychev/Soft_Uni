@@ -14,11 +14,13 @@ class Robot(ABC):
 
 
 class Android(Robot):
+
     def sensors_count(self):
         return 4
 
 
 class Chappie(Robot):
+
     def sensors_count(self):
         return 6
 
