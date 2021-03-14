@@ -1,4 +1,4 @@
-# Soft_Uni- info
+# Soft_Uni- [info](https://softuni.bg/)
 The "Software University ltd." is an innovative educational program that trains thousands of people in the field of information technology and assists them in their career start-up.
 SoftUni is one of the largest and most respected educational institutions, providing training and career support in the fields of software engineering, digital marketing and design.
 
