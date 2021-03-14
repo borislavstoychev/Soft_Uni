@@ -1,6 +1,6 @@
 # Exercise: SOLID
 Problems for exercise and homework for the Python OOP Course @SoftUni. 
-## 1. Workers
+## 1. Workers - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/SOLID/exercise/workers.py)
 You are provided with a code on which you have to apply the DIP (Dependency Inversion Principle) so that when adding a new worker classes, the Manager class will work properly
 ### Examples
 
@@ -42,7 +42,7 @@ except AssertionError:
 I'm working!!
 I work very hard!!!
 ```
-## 2. Workers – Updated
+## 2. Workers – Updated - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/SOLID/exercise/workers_udate.py)
 You are provided with a code on which you have to apply the ISP (Interface Segregation Principle) by splitting the Worker class into two classes (Workable and Eatable), so the Robot class no longer needs to implement the eat method
 ### Examples
 #### Before
@@ -99,7 +99,7 @@ I'm super worker. I work very hard!
 Lunch break....(3 secs)
 I'm a robot. I'm working....
 ```
-## 3. Prisoner
+## 3. Prisoner - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/SOLID/exercise/prisoner.py)
 You are provided with a code containing a class Prisoner and a class Person. A prisoner is obviously a person, but since a prisoner is not free to move an arbitrary distance, the Person class can be named FreePerson, then the idea that Prisoner inherits FreePerson is wrong. Rewrite the code and apply the LSP (Liskov Substitution Principle).
 ### Examples
 #### Before
@@ -142,7 +142,7 @@ The prisoner trying to walk to north by 10 and east by -3.
 The location of the prison: (3, 3)
 The current position of the prisoner: (3, 3)
 ```
-## 4. Shapes
+## 4. Shapes - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/SOLID/exercise/shapes.py)
 You are provided with code containing class Rectangle and class AreaCalculator. Refactor the code using the Open/Closed Principle, so that the code is open for extension (adding more shapes) but closed for modification.
 ### Examples
 #### Before
