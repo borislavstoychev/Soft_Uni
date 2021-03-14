@@ -2,7 +2,8 @@
 Problems for in-class lab for the Python OOP Course @SoftUni.
 ## 1. Books - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/SOLID/lab/books.py)
 Refactor the provided code, so there is a separate class called Library, which contains books and has a method called find_book(title) that returns the book with the given title. Remove the unnecessary code from the Book class.
-```class Book:
+```
+class Book:
     def __init__(self, title, author, location):
         self.title = title
         self.author = author
@@ -14,7 +15,8 @@ Refactor the provided code, so there is a separate class called Library, which c
 ```
 ## 2. Animals - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/SOLID/lab/animals.py)
 Refactor the provided code, so you don't need to make any changes in it when you want to add new species to the animals list
-```class Animal:
+```
+class Animal:
     def __init__(self, species):
         self.species = species
 
@@ -39,7 +41,8 @@ animal_sound(animals)
 ```
 ## 3. Robots - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/SOLID/lab/robots.py)
 Refactor the provided code, so it is in line with the Liskov Substitution Principle. Define a method in the parent class. The subclasses should implement the method, so it returns the count of sensors for each type of robot.
-```class Robot:
+```
+class Robot:
     def __init__(self, type):
         self.type = type
 
@@ -70,7 +73,8 @@ count_robot_senzors(robots)
 ```
 ## 4. Entertainment System - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/SOLID/lab/entertainment_system.py)
 We've been hired to create a game where the player sets up entertainment systems. Each piece of the system (television, game console, etc.) uses a specific cable to connect to another device. The TV uses an HDMI cable to connect to a game console. Both the game console and TV connect to a router via an ethernet cable so they can access the internet. And lastly, all the devices are connected to the wall via a power cable so they can turn on. Your job is to extend this behavior in the device classes.
-```class EntertainmentDevice:
+```
+class EntertainmentDevice:
     def connect_to_device_via_hdmi_cable(self, device): pass
     def connect_to_device_via_rca_cable(self, device): pass
     def connect_to_device_via_ethernet_cable(self, device): pass
@@ -119,7 +123,8 @@ class Router(EntertainmentDevice):
 ```
 ## 5. Print books - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/SOLID/lab/print_books.py)
 We want to be able to print books, but before printing the book we should be able to format it. To accomplish this we have a class that can print books called Printer and a class Formatter which is used by Printer. Refactor the provided code that breaks the DIP because both Printer and Formatter depend on concretions, not abstractions by creating some abstractions and inject them wherever they are needed.
-```class Book:
+```
+class Book:
     def __init__(self, content: str):
         self.content = content
 
