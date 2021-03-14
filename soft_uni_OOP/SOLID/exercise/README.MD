@@ -162,7 +162,7 @@ print("The total area is: ", calculator.total_area)
 ```
 #### Result
 ```The total area is:  9.0```
-## 5. Emails - Solution[first](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/SOLID/exercise/emails.py)[second](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/SOLID/exercise/emails_second_solution.py)
+## 5. Emails - Solution-[first](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/SOLID/exercise/emails.py), [second](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/SOLID/exercise/emails_second_solution.py)
 You are provided with code containing class IEmail and class Email. The code does not follow the principle of single responsibility (the Email class has 2 responsibilities). Create a new class IContent and a class that inherits it called MyContent to split the responsibilities.
 ### Examples
 #### Before
