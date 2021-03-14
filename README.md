@@ -5,4 +5,4 @@ SoftUni is one of the largest and most respected educational institutions, provi
 Founded in 2013, SoftUni is rapidly becoming a market leader and today organizes a number of training programs, free courses and seminars, events and other educational initiatives that provide quality education to thousands of young people in Bulgaria in the IT and Digital technologies.
 
 SoftUni works directly with over 200 technology companies and has an active community of hundreds and thousands of people.
-https://softuni.bg/Content/images/professions/graphic-python.png
+[link](https://softuni.bg/Content/images/professions/graphic-python.png)
