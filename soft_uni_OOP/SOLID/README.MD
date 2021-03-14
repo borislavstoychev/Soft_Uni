@@ -1,10 +1,10 @@
-<<<<<<< HEAD
-#Exercise: SOLID
+# Exercise: SOLID
 Problems for exercise and homework for the Python OOP Course @SoftUni. 
-##1. Workers
+## 1. Workers
 You are provided with a code on which you have to apply the DIP (Dependency Inversion Principle) so that when adding a new worker classes, the Manager class will work properly
-###Examples
-####Before
+### Examples
+
+#### Before
 ```worker = Worker()
 manager = Manager()
 manager.set_worker(worker)
@@ -17,11 +17,11 @@ except AssertionError:
     print("manager fails to support super_worker....")
 ```
     
-#####Result
+##### Result
 ```I'm working!!
 manager fails to support super_worker....
 ```
-#####After
+##### After
 ```worker = Worker()
 manager = Manager()
 manager.set_worker(worker)
@@ -34,14 +34,14 @@ try:
 except AssertionError:
     print("manager fails to support super_worker....")
 ```
-#####Result
+##### Result
 ```I'm working!!
 I work very hard!!!
 ```
-##2. Workers – Updated
+## 2. Workers – Updated
 You are provided with a code on which you have to apply the ISP (Interface Segregation Principle) by splitting the Worker class into two classes (Workable and Eatable), so the Robot class no longer needs to implement the eat method
-###Examples
-####Before
+### Examples
+#### Before
 ```manager = Manager()
 manager.set_worker(Worker())
 manager.manage()
@@ -55,7 +55,7 @@ manager.set_worker(Robot())
 manager.manage()
 manager.lunch_break()
 ```
-####Result
+#### Result
 ```I'm normal worker. I'm working.
 Lunch break....(5 secs)
 I'm super worker. I work very hard!
@@ -63,7 +63,7 @@ Lunch break....(3 secs)
 I'm a robot. I'm working....
 I don't need to eat....
 ```
-####After
+#### After
 ```work_manager = WorkManager()
 break_manager = BreakManager()
 work_manager.set_worker(Worker())
@@ -84,17 +84,17 @@ try:
 except:
     pass
 ```
-####Result
+#### Result
 ```I'm normal worker. I'm working.
 Lunch break....(5 secs)
 I'm super worker. I work very hard!
 Lunch break....(3 secs)
 I'm a robot. I'm working....
 ```
-##3. Prisoner
+## 3. Prisoner
 You are provided with a code containing a class Prisoner and a class Person. A prisoner is obviously a person, but since a prisoner is not free to move an arbitrary distance, the Person class can be named FreePerson, then the idea that Prisoner inherits FreePerson is wrong. Rewrite the code and apply the LSP (Liskov Substitution Principle).
-###Examples
-####Before
+### Examples
+#### Before
 ```prisoner = Prisoner()
 print("The prisoner trying to walk to north by 10 and east by -3.")
 
@@ -107,12 +107,12 @@ except:
 print(f"The location of the prison: {prisoner.PRISON_LOCATION}")
 print(f"The current position of the prisoner: {prisoner.position}")
 ```
-####Result
+#### Result
 ```The prisoner trying to walk to north by 10 and east by -3.
 The location of the prison: [3, 3]
 The current position of the prisoner: [0, 13]
 ```
-####After
+#### After
 ```prisoner = Prisoner()
 print("The prisoner trying to walk to north by 10 and east by -3.")
 
@@ -125,40 +125,40 @@ except:
 print(f"The location of the prison: {prisoner.PRISON_LOCATION}")
 print(f"The current position of the prisoner: {prisoner.position}")
 ```
-####Result
+#### Result
 ```The prisoner trying to walk to north by 10 and east by -3.
 The location of the prison: (3, 3)
 The current position of the prisoner: (3, 3)
 ```
-##4. Shapes
+## 4. Shapes
 You are provided with code containing class Rectangle and class AreaCalculator. Refactor the code using the Open/Closed Principle, so that the code is open for extension (adding more shapes) but closed for modification.
-###Examples
-####Before
+### Examples
+#### Before
 ```shapes = [Rectangle(2, 3), Rectangle(1, 6)]
 calculator = AreaCalculator(shapes)
 print("The total area is: ", calculator.total_area)
 ```
-####Result
+#### Result
 ```The total area is:  12```
-####After
+#### After
 ```shapes = [Rectangle(1, 6), Triangle(2, 3)]
 calculator = AreaCalculator(shapes)
 
 print("The total area is: ", calculator.total_area)
 ```
-####Result
+#### Result
 ```The total area is:  9.0```
-##5. Emails
+## 5. Emails
 You are provided with code containing class IEmail and class Email. The code does not follow the principle of single responsibility (the Email class has 2 responsibilities). Create a new class IContent and a class that inherits it called MyContent to split the responsibilities.
-###Examples
-####Before
+### Examples
+#### Before
 ```email = Email('IM', 'MyML')
 email.set_sender('qmal')
 email.set_receiver('james')
 email.set_content('Hello, there!')
 print(email)
 ```
-####Result
+#### Result
 ```Sender: I'm qmal
 Receiver: I'm james
 Content:
@@ -166,7 +166,7 @@ Content:
 Hello, there!
 </myML>
 ```
-####After
+#### After
 ```email = Email('IM')
 email.set_sender('qmal')
 email.set_receiver('james')
@@ -174,14 +174,9 @@ content = MyContent('Hello, there!')
 email.set_content(content)
 print(email)
 ```
-####Result
+#### Result
 ```Sender: I'm qmal
 Receiver: I'm james
 Content:
 <MyML>Hello, there!</MyML>
 ```
-
-=======
-
-[07-SOLID-Exercise-su.pdf](https://github.com/borislavstoychev/Soft_Uni/files/6136476/07-SOLID-Exercise-su.pdf)
->>>>>>> ea17277d8aed4960d2146fa64b039d8c91101706
