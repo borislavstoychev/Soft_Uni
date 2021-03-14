@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Exercise: SOLID
 Problems for exercise and homework for the Python OOP Course @SoftUni. 
 ##1. Workers
@@ -180,3 +181,7 @@ Content:
 <MyML>Hello, there!</MyML>
 ```
 
+=======
+
+[07-SOLID-Exercise-su.pdf](https://github.com/borislavstoychev/Soft_Uni/files/6136476/07-SOLID-Exercise-su.pdf)
+>>>>>>> ea17277d8aed4960d2146fa64b039d8c91101706
