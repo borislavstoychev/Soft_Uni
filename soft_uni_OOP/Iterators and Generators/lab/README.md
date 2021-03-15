@@ -45,6 +45,5 @@ Note: Submit only the function in the judge system
 ### *Examples*
 Test Code | Output
 ----------| ------
-for char in reverse_text("step"):| pets
-    print(char, end='')|
+for char in reverse_text("step"):<br>print(char, end='')| pets
 
