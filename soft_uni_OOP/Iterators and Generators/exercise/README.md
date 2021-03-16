@@ -1,5 +1,5 @@
 # Exercise: Iterators and Generators
-Problems for exercise and homework for the Python OOP Course @SoftUni. Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/1945
+Problems for exercise and homework for the Python OOP Course @SoftUni. Submit your solutions in the SoftUni judge system at [judge](https://judge.softuni.bg/Contests/1945)
 ##    1. Take Skip - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/Iterators%20and%20Generators/exercise/take_skip_1.py)
 Create a class called take_skip. Upon initialization it should receive a step (number) and a count (number). Implement the __iter__ and __next__ functions. The iterator should return the count numbers (starting from 0) with the given step. For more clarification, see the examples:
 ###### *Note: Submit only the class in the judge system*
@@ -9,6 +9,7 @@ Create a class called take_skip. Upon initialization it should receive a step (n
 |---------- | ------  |
 numbers = take_skip(2, 6)<br>for number in numbers:<br> print(number) | 0<br>2<br>4<br>6<br>8<br>10
 numbers = take_skip(10, 5)<br>for number in numbers:<br> print(number)| 0<br>10<br>20<br>30<br>40
+
 ##    2. Dictionary Iterator - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/Iterators%20and%20Generators/exercise/dictionary_iterator_2.py)
 Create a class called dictionary_iter. Upon initialization it should receive a dictionary object. Implement the iterator, so it returns each key-value pair of the dictionary as a tuple of two elements (the key and the value).
 ###### *Note: Submit only the class in the judge system*
