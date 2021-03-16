@@ -39,12 +39,11 @@ Test Code | Output
 ----------| ------
 print(list(genrange(1, 10)))| [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-## 6. Reverse string [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/Iterators%20and%20Generators/lab/reverse_string_6.py)
+## 6. Reverse string - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/Iterators%20and%20Generators/lab/reverse_string_6.py)
 Create a generator function called reverse_text that receives a string and yield all string characters in reversed order.
 Note: Submit only the function in the judge system
 ### *Examples*
 Test Code | Output
 ----------| ------
-for char in reverse_text("step"):| pets
-    print(char, end='')|
+for char in reverse_text("step"):<br>print(char, end='')| pets
 
