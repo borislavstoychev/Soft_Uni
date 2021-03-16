@@ -1,5 +1,5 @@
 # Lab: Iterators and Generators
-Problems for in-class lab for the Python OOP Course @SoftUni. Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/1944
+Problems for in-class lab for the Python OOP Course @SoftUni. Submit your solutions in the SoftUni judge system at [judge](https://judge.softuni.bg/Contests/1944)
 ## 1. Custom Range - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/Iterators%20and%20Generators/lab/custom_range_1.py)
 Create a class called custom_range that receives start and end upon initialization. Implement the __iter__ and __next__ methods, so the iterator returns the numbers from the start to the end (inclusive).
 Note: Submit only the class in the judge system
