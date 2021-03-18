@@ -1,5 +1,5 @@
 # Exercise: Decorators
-Problems for exercise and homework for the Python OOP Course @SoftUni. Submit your solutions in the SoftUni judge system at [judge](https://judge.softuni.bg/Contests/1947)
+Problems for exercise and homework for the Python OOP Course @SoftUni. Submit your solutions in the SoftUni system at [judge](https://judge.softuni.bg/Contests/1947)
 ##    1. Logged - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/Decorators/exercise/logged_1.py)
 Create a decorator called logged. It should return the name of the function that is being called and its parameters. It should also return the result of the execution of the function being called. See the examples for more clarification.
 ### *Examples*
@@ -24,8 +24,9 @@ Create three decorators: make_bold, make_italic, make_underline, which will have
 ### *Examples*
 Test Code | Output
 ----------| ------
-@make_bold <br>@make_italic <br>@make_underline <br>def greet(name): <br>return f"Hello, {name}"<br>print(greet("Peter")) | <b><i><u>Hello, Peter</u></i></b>
-@make_bold <br>@make_italic <br>@make_underline <br>def greet_all(*args): <br>return f"Hello, {', '.join(args)}"<br>print(greet_all("Peter", "George")) | <b><i><u>Hello, Peter, George</u></i></b>
+@make_bold <br>@make_italic <br>@make_underline <br>def greet(name): <br>return f"Hello, {name}"<br>print(greet("Peter")) | ```<b><i><u>Hello, Peter</u></i></b>```
+@make_bold <br>@make_italic <br>@make_underline <br>def greet_all(*args): <br>return f"Hello, {', '.join(args)}"<br>print(greet_all("Peter", "George")) | ```<b><i><u>Hello, Peter, George</u></i></b>```
+
 *Note: Submit all the decorator functions in the judge system*
  ##   4. Type Check - [Solution](https://github.com/borislavstoychev/Soft_Uni/blob/master/soft_uni_OOP/Decorators/exercise/type_check_4.py)
 Create a decorator called type_check. It should receive a type (int/float/str/…) and it should check if the parameter passed to the decorated function is of the type given to the decorator. If it is, execute the function and return the result, otherwise return "Bad Type".
