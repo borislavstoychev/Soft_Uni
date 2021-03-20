@@ -17,8 +17,8 @@ Load provided skeleton in the IDE you use. Add new project Tests
 
 *Create a class CatTests*
 
-####In judge you need to submit just the CatTests class, with the unitttest module imported.
-###Create the following tests:
+#### In judge you need to submit just the CatTests class, with the unitttest module imported.
+### Create the following tests:
     • Cat's size is increased after eating
     • Cat is fed after eating
     • Cat cannot eat if already fed, raises an error
