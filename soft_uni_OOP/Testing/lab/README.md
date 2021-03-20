@@ -5,7 +5,7 @@ Load provided skeleton in the IDE you use. Add new project Tests
 
 *Create a class WorkerTests*
 
-####In judge you need to submit just the WokerTests class, with the unitttest module imported.
+#### In judge you need to submit just the WokerTests class, with the unitttest module imported.
 ### Create the following tests:
     • Test if the worker is initialized with correct name, salary and energy
     • Test if the worker's energy is incremented after the rest method is called
